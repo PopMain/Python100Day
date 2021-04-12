@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>Python100Day</Name>
     <RootNamespace>Python100Day</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +23,34 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="base\function.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\loop.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\if.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\module_hello.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\module_goodbye.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\program_logic.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\string_data_struct.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Python100Day.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="base\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
