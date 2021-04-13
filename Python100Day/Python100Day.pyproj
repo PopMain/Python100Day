@@ -26,6 +26,9 @@
     <Compile Include="base\function.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="base\llist_practice.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="base\loop.py">
       <SubType>Code</SubType>
     </Compile>
