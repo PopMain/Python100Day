@@ -1,5 +1,5 @@
 
-
+import sys
 #string
 #def println():
 #    print('\n')
@@ -90,7 +90,7 @@ print('{0} * {1} = {2}'.format(a, b, a * b))
 
 printDivider()
 
-#list
+#list 中扩号
 list1 = [1, 2, 3, 4, 5, 6]
 
 println(list1)
@@ -185,3 +185,115 @@ list1.sort(reverse=True)
 print(list1)
 
 printDivider()
+
+#生成式和生成器
+
+f =[x for x in range(1, 10)] 
+println(f)
+
+f = [x + y for x in 'ABCD' for y in '1234']
+
+println(f)
+# 数组
+f = [x ** 2 for x in  range(1, 1000)]
+println(sys.getsizeof(f))
+println(f[0])
+#println(f)
+#生成器
+f = (x ** 2 for x in range(1, 100))
+println(sys.getsizeof(f))
+# println(f[0])TypeError: 'generator' object is not subscriptable
+#println(f)
+#for val in f:
+#    println(val)
+
+#yield
+
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+           a,b=b, a+b
+           yield a
+for val in fib(20):
+    println(val)
+
+
+#tuple 括号
+t = ('骆昊', 38, True, '四川成都')
+
+#t[0] = 3333 错误，tuple不能修改
+
+println(t)
+
+t = ['骆昊', 38, True, '四川成都']
+
+println(t)
+
+#set 花括号
+set1 = {1, 2, 3, 3, 3, 2}
+print(set1)
+print('Length =', len(set1))
+# 创建集合的构造器语法(面向对象部分会进行详细讲解)
+set2 = set(range(1, 10))
+set3 = set((1, 2, 3, 3, 2, 1))
+print(set2, set3)
+# 创建集合的推导式语法(推导式也可以用于推导集合)
+set4 = {num for num in range(1, 100) if num % 3 == 0 or num % 5 == 0}
+print(set4)
+
+set1.add(4)
+set1.add(5)
+set2.update([11, 12])
+set2.discard(5)
+if 4 in set2:
+    set2.remove(4)
+printDivider()
+print(set1, set2)
+printDivider()
+print(set3.pop())
+printDivider()
+println(set3)
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {2,4,6,7}
+# 集合的交集、并集、差集、对称差运算
+print(set1 & set2)
+# print(set1.intersection(set2))
+print(set1 | set2)
+# print(set1.union(set2))
+print(set1 - set2)
+# print(set1.difference(set2))
+print(set1 ^ set2)
+# print(set1.symmetric_difference(set2))
+# 判断子集和超集
+print(set2 <= set1)
+# print(set2.issubset(set1))
+print(set3 <= set1)
+# print(set3.issubset(set1))
+print(set1 >= set2)
+# print(set1.issuperset(set2))
+print(set1 >= set3)
+# print(set1.issuperset(set3))
+
+#dictionary 或括号 {key:value}
+
+d = {1: 'a', 2:'b', 3:'c'}
+println(d[1])
+d[1] = 'w'
+d.update({4:'d', 5:'e'})
+println(d.get(4))
+println(d)
+d.popitem()
+d.popitem()
+d.pop(1)
+println(d)
+# 创建字典的构造器语法
+items1 = dict(one=1, two=2, three=3, four=4)
+println(items1)
+
+# 通过zip函数将两个序列压成字典
+items2 = dict(zip(['a', 'b', 'c'], '123'))
+println(items2)
+# 创建字典的推导式语法
+item3 = {num: num ** 2 for num in range(1, 10)}
+println(item3)

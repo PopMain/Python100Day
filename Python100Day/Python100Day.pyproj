@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7632a4fe-aa1d-4519-afb2-1a680dfbcade</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Python100Day.py</StartupFile>
+    <StartupFile>base\string_data_struct.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,7 +26,10 @@
     <Compile Include="base\function.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="base\llist_practice.py">
+    <Compile Include="base\object.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="base\string_data_struct_practice.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="base\loop.py">
