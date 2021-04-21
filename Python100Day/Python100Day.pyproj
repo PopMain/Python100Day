@@ -50,13 +50,27 @@
     <Compile Include="base\string_data_struct.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="file_exception\file.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Python100Day.py" />
+    <Compile Include="tkinter\pygame_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tkinter\tkinter_test.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.6" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="base\" />
+    <Folder Include="file_exception\" />
+    <Folder Include="tkinter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="file_exception\TextFile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
